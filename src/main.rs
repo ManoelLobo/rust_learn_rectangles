@@ -1,7 +1,15 @@
-fn main() {
-    let rect_dimensions = (10, 15);
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
 
-    let rect_area = area(rect_dimensions);
+fn main() {
+    let rectangle = Rectangle {
+        width: 10,
+        height: 15,
+    };
+
+    let rect_area = area((rectangle.width, rectangle.height));
 
     println!("The area of the rectangle is {rect_area}")
 }
