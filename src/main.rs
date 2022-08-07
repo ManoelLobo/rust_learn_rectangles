@@ -9,11 +9,14 @@ fn main() {
         height: 15,
     };
 
-    let rect_area = area((rectangle.width, rectangle.height));
+    let rect_area = area(rectangle);
 
-    println!("The area of the rectangle is {rect_area}")
+    println!("The area of the rectangle is {rect_area}");
+
+    // Will not work because `area()` got ownership of `rectangle`
+    // let width = rectangle.width;
 }
 
-fn area(dimensions: (u32, u32)) -> u32 {
-    dimensions.0 * dimensions.1
+fn area(rectangle: Rectangle) -> u32 {
+    rectangle.width * rectangle.height
 }
