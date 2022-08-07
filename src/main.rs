@@ -1,3 +1,4 @@
+#[derive(Debug)]
 struct Rectangle {
     width: u32,
     height: u32,
@@ -9,11 +10,9 @@ fn main() {
         height: 15,
     };
 
-    // One less variable assignment :)
     println!("The area of the rectangle is {}", area(&rectangle));
 
-    // Would work now because `area()` got only a reference for `rectangle`
-    // let width = rectangle.width;
+    println!("The rectangle is {:?}", rectangle);
 }
 
 fn area(rectangle: &Rectangle) -> u32 {
