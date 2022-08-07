@@ -1,8 +1,7 @@
 fn main() {
-    let width = 10;
-    let height = 15;
+    let rect_dimensions = (10, 15);
 
-    let rect_area = area((width, height));
+    let rect_area = area(rect_dimensions);
 
     println!("The area of the rectangle is {rect_area}")
 }
